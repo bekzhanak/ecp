@@ -12,7 +12,7 @@ async def main():
     scheduler.start()
 
     while True:
-        asyncio.run(start_bot())
+        await start_bot()
         await asyncio.sleep(1)
 
 if __name__ == '__main__':
