@@ -9,7 +9,7 @@ from search import *
 load_dotenv()
 
 TOKEN = os.getenv("TOKEN")
-admins = [897190202]
+admins = {897190202}
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
@@ -18,7 +18,7 @@ dp = Dispatcher()
 @dp.message(CommandStart())
 async def send_welcome(message: Message):
     print(f"{message.from_user.id} started bot")
-    admins.append(message.from_user.id)
+    admins.add(message.from_user.id)
     await message.reply("Добро пожаловать на бот мониторинга лотов")
 
 
