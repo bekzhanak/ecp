@@ -19,7 +19,7 @@ dp = Dispatcher()
 async def send_welcome(message: Message):
     print(f"{message.from_user.id} started bot")
     admins.append(message.from_user.id)
-    await message.reply("Welcome to the Lots Monitoring Bot!")
+    await message.reply("Добро пожаловать на бот мониторинга лотов")
 
 
 async def check_lots():
@@ -33,7 +33,7 @@ async def check_lots():
         for admin in admins:
             for lot in new_lots:
                 print(f"Sending message to {admin}: {lot['id']}")
-                await bot.send_message(admin, f"New lot found: {lot['link']}")
+                await bot.send_message(admin, f"Найден новый лот: {lot['link']}")
 
 
 async def start_bot():
