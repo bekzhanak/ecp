@@ -8,7 +8,7 @@ async def main():
     load_dotenv()
 
     scheduler = AsyncIOScheduler()
-    scheduler.add_job(check_lots, "interval", seconds=5)
+    scheduler.add_job(check_lots, "interval", minutes=1)
     scheduler.start()
 
     while True:

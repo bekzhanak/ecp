@@ -9,7 +9,7 @@ from search import *
 load_dotenv()
 
 TOKEN = os.getenv("TOKEN")
-admins = {897190202}
+admins = {897190202, 6550273340}
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
